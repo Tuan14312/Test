@@ -5,6 +5,8 @@ logoscript "210869654"
 
 tacgia "sadas''
 
+loadstring(game:https://raw.githubusercontent.com/Tuan14312/Test/refs/heads/main/README.md
+
 lua
 local characters = {all player}
 local function addCharacter(character)
