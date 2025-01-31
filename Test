@@ -1,0 +1,14 @@
+lua
+local hitbox = Instance.new("Part")
+hitbox.Name = "Hitbox"
+hitbox.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+hitbox.Size = Vector3.new(10, 10, 10)
+hitbox.Anchored = true
+hitbox.Transparency = 200.0
+hitbox.Parent = game.Players.LocalPlayer.Character
+
+hitbox.Touched:Connect(function(hit)
+if hit.Parent:FindFirstChild("Humanoid") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(hit.Position)
+end
+end)
